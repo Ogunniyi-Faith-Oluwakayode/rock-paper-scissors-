@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js"></script>
+</head>
+<body>
+    <center class="center">
+        <table border=5 class="table">
+            <input type="text" name="" id="personalId" placeholder="Enter your Name">
+            <tr>
+                <td><p id="user">Username</p></td>
+                <td>Computer</td>
+            </tr>
+            <tr>
+                <td><p id="userScore">0</p></td>
+                <td><p id="computerScore">0</p></td>
+            </tr>
+        </table><br>
+        <h1 id="conclusion">Click On Start button</h1>
+        <button onclick="rock()" id="gm1">Rock</button>
+        <button onclick="scissors()" id="gm2">Scissors</button>
+        <button onclick="paper()" id="gm3">Paper</button><br><br>
+        
+        <button onclick="reStart()" id="restart">Restart</button>
+        <button onclick="start()" id="start">Start</button>
+    </center>
+    
+   
+</body>
+</html>

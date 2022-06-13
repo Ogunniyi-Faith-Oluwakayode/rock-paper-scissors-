@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assign.css">
+</head>
+
+<body>
+    <center>
+        <div id="image" style="height: 98px; width: 298px; background-color: cornflowerblue; border-radius: 10px; border-bottom-style: outset; border-right-style: outset;"></div>
+
+        <div style="border-radius: 30px;" class="main-cal">
+            <input placeholder="" id="val1" style=" border-radius: 10px; border-bottom-style: outset; border-right-style: outset; background-color: rgb(124, 62, 34); width: 150px; height: 50px; margin-bottom: -500px; margin-left: 150px;">
+            <h4>TWO WAY POWER</h4>
+            <div>
+                <input id="firstt" style="height: 100px; border-radius: 10px; border-bottom-style: outset; border-right-style: outset; background-image: radial-gradient() ; width: 300px; margin-top: -5px; margin-left: 2px;">
+            </div>
+            <h1 style="margin-top: -178px;">YANK</h1>
+            <h2 style="margin-top: -7px;">fx-991ES PLUS</h2>
+            <h3 style="margin-top: -10px;">NATURAL-V.P.A.M.</h3>
+        </div>
+
+        <div class="button1">
+            <h1 style="margin-top: -118px; margin-left: 130px;"> <button style=" width: 45px; height: 45px; background-color: white;  border-radius: 20px;" onclick="ansValues()">Ans</button> </h1>
+            <h1 style="color: rgb(224, 195, 28); margin-left: 130px; margin-top: -74px; font-size: 7px;">DRG</h1>
+            <h2 style="margin-left: 270px; margin-top: -4px;"> <button id="" style=" width: 38px; height: 45px; background-color: white;  border-radius: 20px;" data-equals-class="1" onclick="equal()">=</button> </h2>
+            <h3 style="margin-top: -120px; margin-left: 125px;"> <button id="plus" style="background-color: white;  border-radius: 20px; width: 38px; height: 45px;" data-operator onclick="display('+')">+</button> </h3>
+            <h3 style="color: rgb(224, 195, 28); font-size: 9px; margin-top: -74px; margin-left: 125px;">Pol</h3>
+            <h4 style="margin-left: 270px; margin-top: -7px;"> <button id="minus" style=" width: 38px; height: 45px; background-color: white;  border-radius: 20px;" data-operator onclick="display('-')">-</button></h4>
+            <h4 style="font-size: 9px; color: rgb(224, 195, 28); margin-top: -76px; margin-left: 272px;">Rec</h4>
+            <h5 style="margin-top: -69px; margin-left: 125px;"> <button id="multiply" style=" width: 38px; height: 45px; background-color: white;  border-radius: 20px;" data-operator onclick="display('*')">x</button> </h5>
+            <h5 style="color: rgb(224, 195, 28); margin-top: -80px; margin-left: 125px; font-size: 10px">nPr</h5>
+            <h6 style="margin-left: 270px; margin-top: -16px;"> <button id="divide" style=" width: 38px; height: 45px; background-color: white;  border-radius: 20px;" data-operator onclick="display('÷')">÷</button> </h6>
+            <h6 style="color: rgb(224, 195, 28); font-size: 10px; margin-top: -83px; margin-left: 270px;">nCr</h6>
+        </div>
+
+        <div class="button2">
+            <h1 style="margin-top: -23px; margin-left: -10px;"> <button style=" width: 60px; height: 40px; background-color: white;  border-radius: 20px;" onclick="powerValues()">x10</button> </h1>
+            <h1 style="color: rgb(224, 195, 28); font-size: 12px; margin-top: -75px; margin-left: -35px;">π</h1>
+            <h1 style="font-size: 12px;  color: rgb(219, 43, 43); margin-left: 20px; margin-top: -21px;">e</h1>
+            <h2 style="margin-top: -10px; margin-left: -143px;"> <button style=" width: 30px; height: 40px; background-color: white;  border-radius: 20px;" onclick="dotValues()">•</button> </h2>
+            <h2 style="font-size: 9px; color: rgb(224, 195, 28); margin-top: -70px; margin-left: -170px;">Ran#</h2>
+            <h2 style="font-size: 8px; color: rgb(219, 43, 43); margin-top: -16px; margin-left: -110px;">Ranint</h2>
+            <h3 style="margin-top: -64px; margin-left: -13px;"> <button id="three" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="3" onclick="display('3')">3</button> </h3>
+            <h3 style="font-size: 12px; color: rgb(8, 94, 8); margin-top: -64px; margin-left: -41px;">[</h3>
+            <h3 style="font-size: 12px; color: rgb(8, 94, 8); margin-top: -26px; margin-left: 14px;">]</h3>
+            <h3 style="font-size: 9px; color: rgb(224, 195, 28); margin-top: -30px; margin-left: -12px;">BASE</h3>
+            <h4 style="margin-top: -11px; margin-left: -140px;"> <button id="two" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="2" onclick="display('2')">2</button> </h4>
+            <h4 style="font-size: 12px; color: rgb(148, 41, 248); margin-left: -170px; margin-top: -65px;">[</h4>
+            <h4 style="font-size: 12px; color: rgb(148, 41, 248); margin-left: -108px; margin-top: -30px;">]</h4>
+            <h4 style="font-size: 7px; color: rgb(224, 195, 28); margin-top: -33px; margin-left: -139px;">CMPLX</h4>
+            <h5 style="margin-top: -63px; margin-left: -15px;"> <button id="six" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="6" onclick="display('6')">6</button> </h5>
+            <h6 style="margin-left: -140px; margin-top: -63px"> <button id="five" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="5" onclick="display('5')">5</button> </h6>
+            <h6 style="color: black; font-size: 13px; margin-top: -69px; margin-left: -171px;">[</h6>
+            <h6 style="color: black; font-size: 13px; margin-top: -45px; margin-left: -105px;">]</h6>
+            <h6 style="color: rgb(224, 195, 28); font-size: 7px; margin-left: -138px; margin-top: -48px;">VECTOR</h6>
+        </div>
+
+        <div class="button3">
+            <h1 style="margin-left: -265px; margin-top: -17px;"> <button id="" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="0" onclick="display('0')">0</button> </h1>
+            <h1 style="color: rgb(224, 195, 28); font-size: 9px; margin-top: -72px; margin-left: -265px;">Rnd</h1>
+            <h2 style="margin-left: -267px; margin-top: -63px;"> <button id="one" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="1" onclick="display('1')">1</button> </h2>
+            <h2 style="font-size: 12px; color: black; margin-top: -65px; margin-left: -294px;">[</h2>
+            <h2 style="font-size: 12px; color: black; margin-top: -24px; margin-left: -240px;">]</h2>
+            <h2 style="color: rgb(224, 195, 28); font-size: 8px; margin-left: -265px; margin-top: -27px;">STAT</h2>
+            <h3 style="margin-top: -60px; margin-left: -267px;"> <button id="four" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="4" onclick="display('4')">4</button> </h3>
+            <h3 style="font-size: 15px; margin-top: -65px; margin-left: -297px;">[</h3>
+            <h3 style="font-size: 12px; margin-left: -235px; margin-top: -31px;">]</h3>
+            <h3 style="font-size: 7px; margin-top: -28px; margin-left: -263px; color: rgb(224, 195, 28);">MATRIX</h3>
+            <h4 style="margin-top: -61px; margin-left: 270px;"> <button id="" style=" width: 50px; height: 40px; background-color: rgb(255, 141, 1); border-radius: 20px;" data-off onclick="off()">AC</button> </h4>
+            <h5 style="margin-top: -62px; margin-left: 120px;"> <button id="" style=" width: 50px; height: 40px; background-color: rgb(255, 141, 1); border-radius: 20px;" data-delete onclick="del()">DEL</button> </h5>
+            <h5 style="font-size: 10px; color: rgb(224, 195, 28); margin-top: -74px; margin-left: 275px;">0FF</h5>
+            <h5 style="font-size: 9px; color: rgb(224, 195, 28); margin-top: -28px; margin-left: 120px;">INS</h5>
+            <h6 style="margin-top: -16px; margin-left: -15px;"> <button id="nine" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="9" onclick="display('9')">9</button> </h6>
+            <h6 style="margin-top: -74px; margin-left: -15px; color: rgb(224, 195, 28); font-size: 8px;">CLR</h6>
+        </div>
+
+        <div class="button4">
+            <h1 style="margin-left: -140px; margin-top: -185px;"> <button id="eight" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="8" onclick="display('8')">8</button> </h1>
+            <h1 style="font-size: 8px; color: rgb(224, 195, 28); margin-top: -70px; margin-left: -138px;">CONV</h1>
+            <h2 style="margin-left: -267px; margin-top: -7px;"> <button id="seven" style=" width: 40px; height: 40px; background-color: white;  border-radius: 20px;" data-number="7" onclick="display('7')">7</button> </h2>
+            <h2 style="font-size: 8px; color: rgb(224, 195, 28); margin-top: -67px; margin-left: -265px;">CONST</h2>
+            <h3 style=" margin-top: -50px; margin-left: 275px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">M+</button> </h3>
+            <h3 style="color: rgb(224, 195, 28); font-size: 9px; margin-top: -55px; margin-left: 257px;">M- </h3>
+            <h3 style="font-size: 9px; margin-top: -19px; margin-left: 293px; color: rgb(219, 43, 43);">M</h3>
+            <h4 style="font-size: 12px; margin-left: 158px; margin-top: -10px;"> <button style="width: 50px; background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">S∞D</button> </h4>
+            <h4 style="font-size: 9px; margin-top: -53px; margin-left: 150px; color: rgb(219, 43, 43);">Y</h4>
+            <h5 style="margin-top: -12px; margin-left: 48px;"> <button style="width: 30px; background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">)</button> </h5>
+            <h5 style="font-size: 10px; color: rgb(219, 43, 43); margin-top: -61px; margin-left: 70px;">x</h5>
+            <h5 style="font-size: 18px; color: rgb(224, 195, 28); margin-top: -39px; margin-left: 30px;">,</h5>
+            <h6 style="margin-top: -31px; margin-left: -46px;"> <button style="background-color: black; width: 30px;
+             color: white; border-radius: 30%; border-block-width: 5px;">(</button> </h6>
+            <h6 style="font-size: 9px; color: rgb(224, 195, 28); margin-top: -61px; margin-left: -43px;">%</h6>
+        </div>
+
+        <div class="button5">
+            <h1 style="margin-top: -59px; margin-left: -150px; color: rgb(219, 43, 43); font-size: 15px;"> <button style="width: 38px; background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">ENG</button> </h1>
+            <h1 style="font-size: 9px; color: rgb(148, 41, 248); margin-top: -46px; margin-left: -140px;">!</h1>
+            <h2 style="margin-left: -266px; margin-top: -11px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">RCL</button> </h2>
+            <h2 style="font-size: 8px; color: rgb(204, 179, 35); margin-left: -265px; margin-top: -55px;">STO</h2>
+            <h2 style="font-size: 9px; margin-left: 290px; margin-top: -55px; color: rgb(219, 43, 43);">F</h2>
+            <h3 style="margin-top: -8px; margin-left: 276px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">tan</button> </h3>
+            <h3 style="font-size: 9px; margin-left: 260px; margin-top: -57px; color: rgb(204, 179, 35);">tan</h3>
+            <h3 style="font-size: 10px; margin-left: 278px; margin-top: -15px; color: rgb(8, 94, 8);">[</h3>
+            <h3 style="font-size: 10px; margin-left: 300px; margin-top: -23px; color: rgb(8, 94, 8);">]</h3>
+            <h4 style="margin-top: -16px; margin-left: 160px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">cos</button> </h4>
+            <h4 style="margin-top: -59px; margin-left: 145px; color: rgb(204, 179, 35); font-size: 9px;">cos</h4>
+            <h4 style="font-size: 12px; color: rgb(8, 94, 8); margin-left: 163px; margin-top: -18px;">[</h4>
+            <h4 style="font-size: 12px; color: rgb(8, 94, 8); margin-left: 187px; margin-top: -30px;">]</h4>
+            <h4 style="font-size: 8px; color: rgb(219, 43, 43); margin-left: 175px; margin-top: -31px;">E</h4>
+            <h5 style="margin-top: -13px; margin-left: 50px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">sin</button></h5>
+            <h5 style="color: rgb(204, 179, 35); margin-left: 33px; margin-top: -59px; font-size: 9px;">sin</h5>
+            <h5 style="font-size: 12px; margin-left: 50px; margin-top: -22px; color: rgb(8, 94, 8);">[</h5>
+            <h5 style="font-size: 12px; margin-left: 70px; margin-top: -33px; color: rgb(8, 94, 8);">]</h5>
+            <h5 style="font-size: 9px; margin-left: 60px; margin-top: -37px; color: rgb(219, 43, 43);">D</h5>
+            <h6 style="margin-left: -60px; margin-top: -16px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">hyp</button> </h6>
+            <h6 style="font-size: 9px; margin-left: -76px; margin-top: -62px; color: rgb(204, 179, 35);">Abs</h6>
+            <h6 style="font-size: 9px; margin-left: -55px; margin-top: -27px; color: rgb(8, 94, 8);">[</h6>
+            <h6 style="font-size: 9px; margin-left: -35px; margin-top: -31px; color: rgb(8, 94, 8);">]</h6>
+            <h6 style="font-size: 9px; margin-left: -45px; margin-top: -34px; color: rgb(219, 43, 43);">C</h6>
+        </div>
+
+        <div class="button6">
+            <h1 style="margin-left: -170px; margin-top: -72px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">˚,,,</button> </h1>
+            <h1 style="margin-left: -170px; margin-top: -56px; font-size: 12px; color: rgb(8, 94, 8);">[</h1>
+            <h1 style="margin-left: -150px; margin-top: -22px; font-size: 12px; color: rgb(8, 94, 8);">]</h1>
+            <h1 style="margin-left: -160px; margin-top: -24px; color: rgb(219, 43, 43); font-size: 9px;">B</h1>
+            <h2 style="margin-left: -275px; margin-top: -8px; color: rgb(219, 43, 43); font-size: 12px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">(-)</button> </h2>
+            <h2 style="margin-left: -290px; margin-top: -48px; font-size: 10px; color: rgb(204, 179, 35);">≤</h2>
+            <h2 style="margin-left: -300px; margin-top: -16px; font-size: 12px; color: rgb(148, 41, 248);">[</h2>
+            <h2 style="margin-left: -280px; margin-top: -24px; font-size: 12px; color: rgb(148, 41, 248);">]</h2>
+            <h2 style="margin-left: -260px; margin-top: -26px; font-size: 8px; color: rgb(219, 43, 43);">A</h2>
+            <h2 style="margin-left: -270px; margin-top: -13px; font-size: 12px; color: rgb(8, 94, 8);">[</h2>
+            <h2 style="margin-left: -250px; margin-top: -24px; font-size: 12px; color: rgb(8, 94, 8);">]</h2>
+            <h3 style="margin-left: 278px; margin-top: -55px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px; width: 35px;">In</button> </h3>
+            <h3 style="margin-left: 260px; margin-top: -57px; font-size: 10px; color: rgb(204, 179, 35);">e</h3>
+            <h3 style="margin-left: 287px; margin-top: -19px; color: rgb(8, 94, 8); font-size: 7px;">OCT</h3>
+            <h4 style="margin-left: 163px; margin-top: -8px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">log</button> </h4>
+            <h4 style="margin-left: 143px; margin-top: -57px; font-size: 9px; color: rgb(204, 179, 35);">10</h4>
+            <h4 style="margin-left: 175px; margin-top: -20px; font-size: 7px; color: rgb(8, 94, 8);">BIN</h4>
+            <h5 style="margin-left: 50px; margin-top: -11px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px; width: 30px;">x</button> </h5>
+            <h5 style="margin-left: 37px; margin-top: -57px; font-size: 8px; color: rgb(204, 179, 35);">√</h5>
+            <h5 style="margin-left: 60px; margin-top: -21px; font-size: 7px; color: rgb(8, 94, 8);">HEX</h5>
+            <h6 style="margin-left: -60px; margin-top: -14px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">x2</button> </h6>
+            <h6 style="margin-left: -75px; margin-top: -61px; font-size: 9px; color: rgb(204, 179, 35);">x3</h6>
+            <h6 style="margin-left: -46px; margin-top: -29px; font-size: 7px; color: rgb(8, 94, 8);">DEC</h6>
+        </div>
+
+        <div class="button7">
+            <h1 style="margin-left: -170px; margin-top: -56px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px; width: 30px;">√</button> </h1>
+            <h1 style="margin-left: -170px; margin-top: -57px; font-size: 8px; color: rgb(204, 179, 35);">3√</h1>
+            <h2 style="margin-left: -275px; margin-top: -10px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px; width: 30px;">–</button> </h2>
+            <h3 style="margin-left: 280px; margin-top: -85px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">log</button> </h3>
+            <h3 style="margin-left: 280px; margin-top: -60px; font-size: 12px; color: rgb(204, 179, 35);">∑</h3>
+            <h4 style="margin-left: 165px; margin-top: -12px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px;">x¬1</button> </h4>
+            <h4 style="margin-left: 165px; margin-top: -60px; font-size: 12px; color: rgb(204, 179, 35);">x!</h4>
+            <h5 style="margin-left: -170px; margin-top: -18px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px; width: 30px;">∫</button> </h5>
+            <h5 style="margin-left: -155px; margin-top: -62px; font-size: 12px; color: rgb(219, 43, 43);">:</h5>
+            <h5 style="margin-left: -180px; margin-top: -33px; font-size: 10px; color: rgb(204, 179, 35);">dx</h5>
+            <h6 style="margin-left: -275px; margin-top: -19px;"> <button style="background-color: black; color: white; border-radius: 30%; border-block-width: 5px; font-size: 8px; height: 29px; width: 35px;">CALC</button> </h6>
+            <h6 style="margin-left: -282px; margin-top: -62px; font-size: 6px; color: rgb(204, 179, 35);">SOLVE</h6>
+            <h6 style="margin-left: -250px; margin-top: -26px; font-size: 12px; color: rgb(219, 43, 43);">=</h6>
+        </div>
+
+        <div class="button8">
+            <h1 style="margin-left: 275px; margin-top: -110px;"> <button id="onn" style=" width: 40px; height: 40px; background-color: rgb(81, 81, 177); color: whitesmoke; border-radius: 38px; border-top-left-radius: 10px; height: 30px;" data-on onclick="displayon()"></button> </h1>
+            <h1 style="margin-left: 270px; margin-top: -70px; font-size: 9px;">ON</h1>
+            <h2 style="margin-left: 165px; margin-top: 7px;"> <button style=" background-color: rgb(81, 81, 177); border-radius: 38%; border-top-left-radius: 30px; height: 30px; width: 40px;" onclick="modeValues()"></button> </h2>
+            <h2 style="margin-left: 146px; margin-top: -64px; font-size: 7px;">MODE</h2>
+            <h3 style="margin-left: 200px; margin-top: -14px; font-size: 7px; color: rgb(204, 179, 35);">SETUP</h3>
+            <h4> <button style="margin-left: 4px; margin-top: -12px; background-color: rgb(81, 81, 177); border-radius: 50px; color: rgb(52, 52, 102); height: 60px;" onclick="replyValues()">∆REPLAY∆</button></h4>
+            <h5 style="margin-left: -160px; margin-top: -88px;"> <button style="background-color: rgb(81, 81, 177); border-radius: 38%; height: 30px; width: 40px; border-top-right-radius: 30px;" onclick="alphaValues()"></button> </h5>
+            <h5 style="margin-left: -165px; margin-top: -62px; font-size: 7px; color: rgb(219, 43, 43);">ALPHA</h5>
+            <h6 style="margin-left: -272px; margin-top: -12px;"> <button style="width: 40px; height: 40px; background-color: rgb(81, 81, 177); color: whitesmoke; border-radius: 38px; border-top-right-radius: 10px; height: 30px;" onclick="shiftValues()"></button> </h6>
+            <h6 style="margin-left: -270px; margin-top: -70px; font-size: 10px; color: rgb(204, 179, 35);">SHIFT</h6>
+
+        </div>
+    </center>
+    <script>
+        //          let h = 1;
+
+        //         function bulb() {
+        //     if (h == 1) {
+        //         mybulb.src = "bulb3.gif";
+        //         btn.innerText = "OFF";
+        //         h = 0;
+        //     } else if (h == 0) {
+        //         mybulb.src = "bulb1.gif";
+        //         btn.innerText = "ON";
+        //         h = 1;
+        //     }
+        // }
+
+
+        function display(value) {
+            document.getElementById("firstt").value += value;
+        }
+
+        function equal() {
+            let x = firstt.value;
+            firstt.value = eval(x);
+        }
+
+        function del() {
+            firstt.value = "";
+        }
+
+        function off() {
+            firstt.value = "";
+        }
+
+
+        function displayon() {
+
+
+        }
+
+        // function displayon() {
+        //     firstt.value = "|";
+        // }
+    </script>
+</body>
+
+</html>
